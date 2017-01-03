@@ -24,7 +24,7 @@ allprojects {
 - Add this to your app build.gradle:
 ~~~
 dependencies {
-	compile 'com.github.vatsaldesai92:MyCustomWidgetsLibrary:1.0.1'
+	compile 'com.github.vatsaldesai92:MyDynamicRecyclerViewLibrary:1.0.1'
 }
 ~~~
 
@@ -32,7 +32,7 @@ dependencies {
 
 - Add MyDynamicRecyclerView in xml file or dynamicaly careate in java file.
 ~~~
-    <com.desai.vatsal.mydynamicrecyclerview.MyDynamicRecyclerView
+    <com.desai.vatsal.myrecylerviewlibrary.MyDynamicRecyclerView
 		android:id="@+id/myRecyclerview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
@@ -40,12 +40,12 @@ dependencies {
 	MyDynamicRecyclerView myRecyclerview = new MyDynamicRecyclerView(this);
 ~~~
 
-- 
+- Set background & simple divider
 ~~~
 	// set background color
     myRecyclerview.setBackgroundColor(Color.RED);	or	 myRecyclerview.setBackgroundColor("#854559");
 	
-	// set simple divider true/false
+	// set simple divider true/false , Divider will generate automatically if set SimpleDivider true.
     myRecyclerview.setSimpleDivider(true);
 ~~~
 

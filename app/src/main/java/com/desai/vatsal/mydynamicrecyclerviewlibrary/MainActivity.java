@@ -8,6 +8,7 @@ import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.util.Log;
+import android.widget.Toast;
 
 import com.desai.vatsal.myrecylerviewlibrary.MyDynamicRecyclerView;
 
@@ -50,9 +51,9 @@ public class MainActivity extends AppCompatActivity {
 //        myRecyclerview.showInfoLayout();
         myRecyclerview.hideInfoLayout();
 
-        myRecyclerview.setInfoIcon(R.drawable.ic_warning, "#856245");
-        myRecyclerview.setInfoTitle("No Internet Available", 18, Color.GRAY, null);
-        myRecyclerview.setInfoMessage("Please Swipe From Top For Refresh", 14, Color.GRAY, null);
+        myRecyclerview.setInfoIcon(R.drawable.ic_warning, Color.GRAY);
+        myRecyclerview.setInfoTitle("No Internet Available", 22, Color.GRAY, null);
+        myRecyclerview.setInfoMessage("Please Swipe From Top For Refresh", 18, Color.GRAY, null);
 
 
         myRecyclerview.setSwipeRefresh(true);
@@ -96,6 +97,8 @@ public class MainActivity extends AppCompatActivity {
         myRecyclerview.setLoadMoreListener(new MyDynamicRecyclerView.LoadMoreListener() {
             @Override
             public void OnLoadMore() {
+
+                Toast.makeText(MainActivity.this, "Load More...", Toast.LENGTH_SHORT).show();
 
                 Log.e("tag", "Load More...............................................");
 
