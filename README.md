@@ -4,9 +4,11 @@ This is an Android Library for developer to use customized recyclerview with man
 Example is avilable in app module.
 
 <p>
-<img src="https://raw.githubusercontent.com/vatsaldesai92/MyCustomWidgetsLibrary/master/app/src/main/assets/images/mycustomwidgets1.png" alt="screenshot" width="270">
+<img src="https://github.com/vatsaldesai92/MyDynamicRecyclerviewLibrary/blob/master/app/src/main/assets/1.png" alt="screenshot" width="270">
 
-<img src="https://raw.githubusercontent.com/vatsaldesai92/MyCustomWidgetsLibrary/master/app/src/main/assets/images/mycustomwidgets2.png" alt="screenshot" width="270">
+<img src="https://github.com/vatsaldesai92/MyDynamicRecyclerviewLibrary/blob/master/app/src/main/assets/2.png" alt="screenshot" width="270">
+
+<img src="https://github.com/vatsaldesai92/MyDynamicRecyclerviewLibrary/blob/master/app/src/main/assets/3.png" alt="screenshot" width="270">
 </p>
 
 ##Download
@@ -24,7 +26,7 @@ allprojects {
 - Add this to your app build.gradle:
 ~~~
 dependencies {
-	compile 'com.github.vatsaldesai92:MyDynamicRecyclerViewLibrary:1.0.1'
+	compile 'com.github.vatsaldesai92:MyDynamicRecyclerviewLibrary:1.0.1'
 }
 ~~~
 
