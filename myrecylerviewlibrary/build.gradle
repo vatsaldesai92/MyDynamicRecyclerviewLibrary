@@ -2,7 +2,7 @@ apply plugin: 'com.android.library'
 apply plugin: 'com.github.dcendents.android-maven'
 
 group = 'com.github.vatsaldesai92'
-version = '1.0.1'
+version = '1.0.2'
 
 android {
     compileSdkVersion 25
@@ -11,7 +11,7 @@ android {
     defaultConfig {
         minSdkVersion 9
         targetSdkVersion 25
-        versionCode 1
+        versionCode 2
         versionName version
     }
     buildTypes {
