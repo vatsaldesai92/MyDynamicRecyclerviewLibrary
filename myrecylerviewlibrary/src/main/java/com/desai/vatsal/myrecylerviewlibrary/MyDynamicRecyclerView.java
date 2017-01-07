@@ -40,7 +40,7 @@ public class MyDynamicRecyclerView extends LinearLayout {
 
     private LinearLayoutManager linearLayoutManager;
 
-    private boolean isFABVisible = false;
+    protected static boolean isFABVisible = false;
     private boolean isLoadMore = false;
     private int flag = 0;
     private int cnt = 0;
@@ -128,24 +128,25 @@ public class MyDynamicRecyclerView extends LinearLayout {
                 } else if (dy > 0) {
                     // Recycle view scrolling down...
 
-                    int pastVisiblesItems, visibleItemCount, totalItemCount;
+//                  // Check load more is true or false And call listener
+                    if (isLoadMore) {
+                        int pastVisiblesItems, visibleItemCount, totalItemCount;
 
-                    visibleItemCount = linearLayoutManager.getChildCount();
-                    totalItemCount = linearLayoutManager.getItemCount();
-                    pastVisiblesItems = linearLayoutManager.findFirstVisibleItemPosition();
+                        visibleItemCount = linearLayoutManager.getChildCount();
+                        totalItemCount = linearLayoutManager.getItemCount();
+                        pastVisiblesItems = linearLayoutManager.findFirstVisibleItemPosition();
 
-                    if ((visibleItemCount + pastVisiblesItems) >= totalItemCount) {
-                        if (cnt == 0) {
-                            cnt = 1;
+                        if ((visibleItemCount + pastVisiblesItems) >= totalItemCount) {
+                            if (cnt == 0) {
+                                cnt = 1;
 
-//                        // Check load more is true or false And call listener
-                            if (isLoadMore) {
                                 if (loadMoreListener != null) {
                                     loadMoreListener.OnLoadMore();
                                 }
-                            }
 
+                            }
                         }
+
                     }
 
                 }
